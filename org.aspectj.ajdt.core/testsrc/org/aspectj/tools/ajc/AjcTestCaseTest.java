@@ -23,7 +23,7 @@ import org.aspectj.util.FileUtil;
 public class AjcTestCaseTest extends AjcTestCase {
 
 	public void testCompile() {
-		File baseDir = new File("../tests/base/test106");
+		File baseDir = new File("tests/base/test106");
 		String[] args = new String[] {"Driver.java","pkg/Obj.java"};
 		CompilationResult result = ajc(baseDir,args);
 		assertNoMessages(result);
@@ -32,7 +32,7 @@ public class AjcTestCaseTest extends AjcTestCase {
 	}
 	
 	public void testIncrementalCompile() throws Exception {
-		File baseDir = new File("../tests/incrementalju/initialTests/classAdded");
+		File baseDir = new File("tests/incrementalju/initialTests/classAdded");
 		String[] args = new String[] {"-sourceroots","src","-d",".","-incremental"};
 		CompilationResult result = ajc(baseDir,args);
 		assertNoMessages(result);

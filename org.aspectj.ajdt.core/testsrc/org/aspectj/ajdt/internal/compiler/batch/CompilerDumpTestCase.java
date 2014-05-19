@@ -12,6 +12,7 @@ package org.aspectj.ajdt.internal.compiler.batch;
 
 import java.io.File;
 
+import org.aspectj.testing.util.TestResources;
 import org.aspectj.bridge.IMessage;
 import org.aspectj.tools.ajc.AjcTestCase;
 import org.aspectj.tools.ajc.CompilationResult;
@@ -28,7 +29,7 @@ public class CompilerDumpTestCase extends AjcTestCase {
 	protected void setUp() throws Exception {
 		super.setUp();
 
-		baseDir = new File("../org.aspectj.ajdt.core/testdata", PROJECT_DIR);
+		baseDir = new File(TestResources.AJDT_TESTDATA, PROJECT_DIR);
 		dumpFile = null;
 		savedDumpCondition = Dump.getDumpOnExit();
 	}

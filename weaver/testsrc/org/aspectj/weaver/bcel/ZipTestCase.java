@@ -20,6 +20,8 @@ import junit.framework.TestCase;
 
 import org.aspectj.weaver.BcweaverTests;
 
+import static org.aspectj.testing.util.TestResources.WEAVER_TESTDATA;
+
 public class ZipTestCase extends TestCase {
 
 	File outDir;
@@ -70,8 +72,8 @@ public class ZipTestCase extends TestCase {
 				world.addPath(new File(aspectjar).toString());
 			}
 		}
-		weaver.addLibraryJarFile(new File(BcweaverTests.TESTDATA_PATH + "/Regex.jar")); // ???
-		world.addPath(new File(BcweaverTests.TESTDATA_PATH + "/Regex.jar").getPath());
+		weaver.addLibraryJarFile(new File(WEAVER_TESTDATA + "/Regex.jar")); // ???
+		world.addPath(new File(WEAVER_TESTDATA + "/Regex.jar").getPath());
 
 		Collection<String> woven = weaver.weave(outFile);
 		long stopTime = System.currentTimeMillis();
@@ -84,17 +86,17 @@ public class ZipTestCase extends TestCase {
 	}
 
 	public void testSmall() throws IOException {
-		zipTest(BcweaverTests.TESTDATA_PATH + "/Regex.jar", null);
+		zipTest(WEAVER_TESTDATA + "/Regex.jar", null);
 	}
 
 	public void testSmallWithAspects() throws IOException {
 		System.out.println("could take 4 seconds...");
-		zipTest(BcweaverTests.TESTDATA_PATH + "/Regex.jar", BcweaverTests.TESTDATA_PATH + "/megatrace.jar");
+		zipTest(WEAVER_TESTDATA + "/Regex.jar", WEAVER_TESTDATA + "/megatrace.jar");
 	}
 
 	public void testSmallWithAspectsNoWeave() throws IOException {
 		System.out.println("could take 4 seconds...");
-		zipTest(BcweaverTests.TESTDATA_PATH + "/Regex.jar", BcweaverTests.TESTDATA_PATH + "/megatraceNoweave.jar", true);
+		zipTest(WEAVER_TESTDATA + "/Regex.jar", WEAVER_TESTDATA + "/megatraceNoweave.jar", true);
 	}
 
 	public void testBig() throws IOException {
@@ -104,18 +106,18 @@ public class ZipTestCase extends TestCase {
 
 	public void testBigWithEasyNoTrace() throws IOException {
 		System.out.println("could take 4 seconds...");
-		zipTest("../lib/bcel/bcel.jar", BcweaverTests.TESTDATA_PATH + "/megatrace0easy.jar");
+		zipTest("../lib/bcel/bcel.jar", WEAVER_TESTDATA + "/megatrace0easy.jar");
 	}
 
 	// this is something we test every now and again.
 	public void xtestBigWithHardNoTrace() throws IOException {
 		System.out.println("could take 24 seconds...");
-		zipTest("../lib/bcel/bcel.jar", BcweaverTests.TESTDATA_PATH + "/megatrace0hard.jar");
+		zipTest("../lib/bcel/bcel.jar", WEAVER_TESTDATA + "/megatrace0hard.jar");
 	}
 
 	public void xtestBigWithAspects() throws IOException {
 		System.out.println("could take 40 seconds...");
-		zipTest("../lib/bcel/bcel.jar", BcweaverTests.TESTDATA_PATH + "/megatrace.jar");
+		zipTest("../lib/bcel/bcel.jar", WEAVER_TESTDATA + "/megatrace.jar");
 	}
 
 }

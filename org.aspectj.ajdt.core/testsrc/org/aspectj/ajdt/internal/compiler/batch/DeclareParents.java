@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.aspectj.testing.util.TestResources;
 import org.aspectj.bridge.IMessage;
 import org.aspectj.tools.ajc.AjcTestCase;
 import org.aspectj.tools.ajc.CompilationResult;
@@ -368,7 +369,7 @@ public class DeclareParents extends AjcTestCase {
 
 	protected void setUp() throws Exception {
 		super.setUp();
-		baseDir = new File("../org.aspectj.ajdt.core/testdata", PROJECT_DIR);
+		baseDir = new File(TestResources.AJDT_TESTDATA, PROJECT_DIR);
 	}
 
 	// private List verify(String name) {

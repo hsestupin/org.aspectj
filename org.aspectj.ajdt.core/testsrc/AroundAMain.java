@@ -10,17 +10,10 @@
  *     PARC     initial implementation 
  * ******************************************************************/
 
-import junit.framework.TestCase;
-
 import org.aspectj.runtime.internal.AroundClosure;
 import org.aspectj.util.Reflection;
 
-public class AroundAMain extends TestCase {
-
-	public AroundAMain(String name) {
-		super(name);
-	}
-
+public class AroundAMain  {
 
 	public static void main(String[] args) throws ClassNotFoundException {
 		AroundClosure closure = new AroundClosure() {

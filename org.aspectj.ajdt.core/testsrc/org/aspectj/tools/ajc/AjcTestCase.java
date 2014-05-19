@@ -63,27 +63,24 @@ public class AjcTestCase extends TestCase {
 	protected Ajc ajc;
 
 	// see Ajc and AntSpec
-	public static final String DEFAULT_CLASSPATH_ENTRIES = File.pathSeparator + ".." + File.separator + "bridge" + File.separator
-			+ "bin" + File.pathSeparator + ".." + File.separator + "util" + File.separator + "bin" + File.pathSeparator + ".."
-			+ File.separator + "loadtime" + File.separator + "bin" + File.pathSeparator + ".." + File.separator + "weaver"
-			+ File.separator + "bin" + File.pathSeparator + ".." + File.separator + "weaver5" + File.separator + "bin"
-			+ File.pathSeparator + ".." + File.separator + "asm" + File.separator + "bin" + File.pathSeparator + ".."
-			+ File.separator + "testing-client" + File.separator + "bin" + File.pathSeparator + ".." + File.separator + "runtime"
-			+ File.separator + "bin" + File.pathSeparator + ".." + File.separator + "aspectj5rt" + File.separator + "bin"
-			+ File.pathSeparator + ".." + File.separator + "org.aspectj.matcher" + File.separator + "bin" + File.pathSeparator
-			+ ".." + File.separator + "lib" + File.separator + "junit" + File.separator
+	public static final String DEFAULT_CLASSPATH_ENTRIES = File.pathSeparator + "bridge" + File.separator
+			+ "bin" + File.pathSeparator + "util" + File.separator + "bin" + File.pathSeparator
+			+ "loadtime" + File.separator + "bin" + File.pathSeparator
+            + "weaver" + File.separator + "bin" + File.pathSeparator + "weaver5" + File.separator + "bin"
+			+ File.pathSeparator + "asm" + File.separator + "bin" + File.pathSeparator
+            + "testing-client" + File.separator + "bin" + File.pathSeparator
+            + "runtime" + File.separator + "bin" + File.pathSeparator
+            + "aspectj5rt" + File.separator + "bin" + File.pathSeparator
+            + "org.aspectj.matcher" + File.separator + "bin" + File.pathSeparator
+			+ "lib" + File.separator + "junit" + File.separator
 			+ "junit.jar"
 			+ File.pathSeparator
-			+ ".."
-			+ File.separator
 			+ "lib"
 			+ File.separator
 			+ "bcel"
 			+ File.separator
 			+ "bcel.jar"
 			+ File.pathSeparator
-			+ ".."
-			+ File.separator
 			+ "lib"
 			+ File.separator
 			+ "bcel"
@@ -620,7 +617,7 @@ public class AjcTestCase extends TestCase {
 			
 			File directory = new File (".");
 			String absPath = directory.getAbsolutePath();
-			String javaagent= absPath+File.separator+".."+File.separator+"aj-build"+File.separator+"dist"+File.separator+"tools"+File.separator+"lib"+File.separator+"aspectjweaver.jar";
+			String javaagent= absPath+"aj-build"+File.separator+"dist"+File.separator+"tools"+File.separator+"lib"+File.separator+"aspectjweaver.jar";
 			try {
 
 				String command ="java " +vmargs+ " -classpath " + cp +" -javaagent:"+javaagent + " " + className ;

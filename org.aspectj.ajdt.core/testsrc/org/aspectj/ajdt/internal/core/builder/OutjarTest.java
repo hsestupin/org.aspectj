@@ -12,6 +12,7 @@ package org.aspectj.ajdt.internal.core.builder;
 
 import java.io.File;
 
+import org.aspectj.testing.util.TestResources;
 import org.aspectj.tools.ajc.AjcTestCase;
 import org.aspectj.tools.ajc.CompilationResult;
 import org.aspectj.weaver.WeaverMessages;
@@ -32,7 +33,7 @@ public class OutjarTest extends AjcTestCase {
 	 */
 	protected void setUp() throws Exception {
 		super.setUp();
-		baseDir = new File("../org.aspectj.ajdt.core/testdata",PROJECT_DIR);
+		baseDir = new File(TestResources.AJDT_TESTDATA,PROJECT_DIR);
 	}
 	
 	/**

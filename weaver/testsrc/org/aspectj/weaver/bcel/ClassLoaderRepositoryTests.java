@@ -26,16 +26,17 @@ import java.util.zip.ZipFile;
 import junit.framework.TestCase;
 
 import org.aspectj.apache.bcel.util.ClassLoaderRepository;
+import org.aspectj.testing.util.TestResources;
 
 /** NOT YET INCLUDED IN A FULL TEST RUN - WORK IN PROGRESS CHECKING CLASSLOADERREPOSITORY OPTIMIZATIONS */
 public class ClassLoaderRepositoryTests extends TestCase {
-	private File f;
+    private File f;
 	private ZipFile zf;
 	private Enumeration entries;
 	private Map map;
 	
 	public void setUp() throws Exception {
-    	f = new File("../lib/aspectj/lib/aspectjtools.jar");
+    	f = new File(TestResources.LIB_ASPECTJTOOLS_JAR);
 		assertTrue("Couldn't find aspectjtools to test.  Tried: "+f.getAbsolutePath(),f.exists());
 		zf = new ZipFile(f);		
 		entries = zf.entries();

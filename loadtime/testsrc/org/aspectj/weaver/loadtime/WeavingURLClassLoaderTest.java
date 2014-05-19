@@ -22,10 +22,14 @@ import java.util.Properties;
 import junit.framework.TestCase;
 
 import org.aspectj.bridge.AbortException;
+import org.aspectj.testing.util.TestResources;
 import org.aspectj.testing.util.TestUtil.TestError;
 import org.aspectj.util.FileUtil;
 import org.aspectj.weaver.BcweaverTests;
 import org.aspectj.weaver.tools.WeavingAdaptor;
+
+import static org.aspectj.testing.util.TestResources.RUNTIME_BIN;
+import static org.aspectj.testing.util.TestResources.WEAVER_TESTDATA;
 
 /**
  * @author websterm
@@ -33,17 +37,16 @@ import org.aspectj.weaver.tools.WeavingAdaptor;
  */
 public class WeavingURLClassLoaderTest extends TestCase {
 
-	private final static String ASPECTJRT = "../runtime/bin";
-	private final static String CLASSES_JAR = BcweaverTests.TESTDATA_PATH + "/ltw-classes.jar";
-	private final static String WOVEN_JAR = BcweaverTests.TESTDATA_PATH + "/ltw-woven.jar";
-	private final static String JUNK_JAR = BcweaverTests.TESTDATA_PATH + "/ltw-junk.jar";
-	private final static String ADVICE_ASPECTS = BcweaverTests.TESTDATA_PATH + "/ltw-aspects.jar";
-	private final static String DW_ADVICE_ASPECTS = BcweaverTests.TESTDATA_PATH + "/ltw-dwaspects.jar";
-	private final static String DE_ADVICE_ASPECTS = BcweaverTests.TESTDATA_PATH + "/ltw-deaspects.jar";
-	private final static String AROUNDCLOSURE_ASPECTS = BcweaverTests.TESTDATA_PATH + "/ltw-acaspects.jar";
-	private final static String ITD_ASPECTS = BcweaverTests.TESTDATA_PATH + "/ltw-itdaspects.jar";
-	private final static String PER_ASPECTS = BcweaverTests.TESTDATA_PATH + "/ltw-peraspects.jar";
-	private final static String TEST_BASE = BcweaverTests.TESTDATA_PATH + "/WeavingURLClassLoaderTest/builtLibs";
+	private final static String CLASSES_JAR = WEAVER_TESTDATA + "/ltw-classes.jar";
+	private final static String WOVEN_JAR = WEAVER_TESTDATA + "/ltw-woven.jar";
+	private final static String JUNK_JAR = WEAVER_TESTDATA + "/ltw-junk.jar";
+	private final static String ADVICE_ASPECTS = WEAVER_TESTDATA + "/ltw-aspects.jar";
+	private final static String DW_ADVICE_ASPECTS = WEAVER_TESTDATA + "/ltw-dwaspects.jar";
+	private final static String DE_ADVICE_ASPECTS = WEAVER_TESTDATA + "/ltw-deaspects.jar";
+	private final static String AROUNDCLOSURE_ASPECTS = WEAVER_TESTDATA + "/ltw-acaspects.jar";
+	private final static String ITD_ASPECTS = WEAVER_TESTDATA + "/ltw-itdaspects.jar";
+	private final static String PER_ASPECTS = WEAVER_TESTDATA + "/ltw-peraspects.jar";
+	private final static String TEST_BASE = WEAVER_TESTDATA + "/WeavingURLClassLoaderTest/builtLibs";
 
 	private final static String NULL = "null";
 
@@ -115,7 +118,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 
 	public void testWeavingURLClassLoader() {
 		URL classes = FileUtil.getFileURL(new File(CLASSES_JAR));
-		URL aspectjrt = FileUtil.getFileURL(new File(ASPECTJRT));
+		URL aspectjrt = FileUtil.getFileURL(new File(RUNTIME_BIN));
 		URL aspects = FileUtil.getFileURL(new File(ADVICE_ASPECTS));
 		URL[] classURLs = new URL[] { aspects, classes, aspectjrt };
 		URL[] aspectURLs = new URL[] { aspects };
@@ -132,7 +135,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 	public void testWeaveAdvice() {
 		setSystemProperty(WeavingURLClassLoader.WEAVING_ASPECT_PATH, ADVICE_ASPECTS);
 		setSystemProperty(WeavingURLClassLoader.WEAVING_CLASS_PATH, ADVICE_ASPECTS + File.pathSeparator + CLASSES_JAR
-				+ File.pathSeparator + ASPECTJRT);
+				+ File.pathSeparator + RUNTIME_BIN);
 		WeavingURLClassLoader loader = new WeavingURLClassLoader(getClass().getClassLoader());
 
 		try {
@@ -146,7 +149,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 	public void testWeaveAdviceWithVerbose() {
 		setSystemProperty(WeavingURLClassLoader.WEAVING_ASPECT_PATH, ADVICE_ASPECTS);
 		setSystemProperty(WeavingURLClassLoader.WEAVING_CLASS_PATH, ADVICE_ASPECTS + File.pathSeparator + CLASSES_JAR
-				+ File.pathSeparator + ASPECTJRT);
+				+ File.pathSeparator + RUNTIME_BIN);
 		setSystemProperty(WeavingAdaptor.WEAVING_ADAPTOR_VERBOSE, "true");
 		WeavingURLClassLoader loader = new WeavingURLClassLoader(getClass().getClassLoader());
 
@@ -161,7 +164,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 	public void testWeaveAdviceWithWeaveInfo() {
 		setSystemProperty(WeavingURLClassLoader.WEAVING_ASPECT_PATH, ADVICE_ASPECTS);
 		setSystemProperty(WeavingURLClassLoader.WEAVING_CLASS_PATH, ADVICE_ASPECTS + File.pathSeparator + CLASSES_JAR
-				+ File.pathSeparator + ASPECTJRT);
+				+ File.pathSeparator + RUNTIME_BIN);
 		setSystemProperty(WeavingAdaptor.SHOW_WEAVE_INFO_PROPERTY, "true");
 		WeavingURLClassLoader loader = new WeavingURLClassLoader(getClass().getClassLoader());
 
@@ -203,7 +206,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 	public void testWeaveAroundClosure() {
 		setSystemProperty(WeavingURLClassLoader.WEAVING_ASPECT_PATH, AROUNDCLOSURE_ASPECTS);
 		setSystemProperty(WeavingURLClassLoader.WEAVING_CLASS_PATH, AROUNDCLOSURE_ASPECTS + File.pathSeparator + CLASSES_JAR
-				+ File.pathSeparator + ASPECTJRT);
+				+ File.pathSeparator + RUNTIME_BIN);
 		WeavingURLClassLoader loader = new WeavingURLClassLoader(getClass().getClassLoader());
 
 		try {
@@ -216,7 +219,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 
 	public void testWeavingITD() {
 		URL classes = FileUtil.getFileURL(new File(CLASSES_JAR));
-		URL aspectjrt = FileUtil.getFileURL(new File(ASPECTJRT));
+		URL aspectjrt = FileUtil.getFileURL(new File(RUNTIME_BIN));
 		URL aspects = FileUtil.getFileURL(new File(ITD_ASPECTS));
 		URL[] classURLs = new URL[] { aspects, classes, aspectjrt };
 		URL[] aspectURLs = new URL[] { aspects };
@@ -236,7 +239,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 
 	public void testWeavingPer() {
 		URL classes = FileUtil.getFileURL(new File(CLASSES_JAR));
-		URL aspectjrt = FileUtil.getFileURL(new File(ASPECTJRT));
+		URL aspectjrt = FileUtil.getFileURL(new File(RUNTIME_BIN));
 		URL aspects = FileUtil.getFileURL(new File(PER_ASPECTS));
 		URL[] classURLs = new URL[] { aspects, classes, aspectjrt };
 		URL[] aspectURLs = new URL[] { aspects };
@@ -252,7 +255,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 
 	public void testWeavingAspects() {
 		URL classes = FileUtil.getFileURL(new File(CLASSES_JAR));
-		URL aspectjrt = FileUtil.getFileURL(new File(ASPECTJRT));
+		URL aspectjrt = FileUtil.getFileURL(new File(RUNTIME_BIN));
 		URL aspects1 = FileUtil.getFileURL(new File(ADVICE_ASPECTS));
 		URL aspects2 = FileUtil.getFileURL(new File(AROUNDCLOSURE_ASPECTS));
 		URL aspects3 = FileUtil.getFileURL(new File(ITD_ASPECTS));
@@ -306,7 +309,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 
 	public void testAddURL() {
 		URL classes = FileUtil.getFileURL(new File(CLASSES_JAR));
-		URL aspectjrt = FileUtil.getFileURL(new File(ASPECTJRT));
+		URL aspectjrt = FileUtil.getFileURL(new File(RUNTIME_BIN));
 		URL aspects = FileUtil.getFileURL(new File(ADVICE_ASPECTS));
 		URL[] classURLs = new URL[] { aspects, aspectjrt };
 		URL[] aspectURLs = new URL[] { aspects };
@@ -324,7 +327,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 
 	public void testParentChild() {
 		URL classes = FileUtil.getFileURL(new File(CLASSES_JAR));
-		URL aspectjrt = FileUtil.getFileURL(new File(ASPECTJRT));
+		URL aspectjrt = FileUtil.getFileURL(new File(RUNTIME_BIN));
 		URL aspects = FileUtil.getFileURL(new File(ADVICE_ASPECTS));
 
 		URL[] classURLs = new URL[] { aspects, aspectjrt };
@@ -436,7 +439,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 
 	public void testWeavingURLClassLoaderOddJars() throws Exception {
 		URL classes = FileUtil.getFileURL(new File(TEST_BASE + "/test.jar/main.file"));
-		URL aspectjrt = FileUtil.getFileURL(new File(ASPECTJRT));
+		URL aspectjrt = FileUtil.getFileURL(new File(RUNTIME_BIN));
 		URL aspects = FileUtil.getFileURL(new File(TEST_BASE + "/aspectNoExt"));
 		URL[] classURLs = new URL[] { aspects, classes, aspectjrt };
 		URL[] aspectURLs = new URL[] { aspects };
@@ -449,7 +452,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 	public void testWeavingURLClassLoaderMissingJars() throws Exception {
 		try {
 			URL classes = FileUtil.getFileURL(new File(TEST_BASE + "/test.jar/main.file"));
-			URL aspectjrt = FileUtil.getFileURL(new File(ASPECTJRT));
+			URL aspectjrt = FileUtil.getFileURL(new File(RUNTIME_BIN));
 			URL aspects = FileUtil.getFileURL(new File(TEST_BASE + "/MissingFile"));
 			URL[] classURLs = new URL[] { aspects, classes, aspectjrt };
 			URL[] aspectURLs = new URL[] { aspects };
@@ -467,7 +470,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 		File classZip = new File(TEST_BASE + "/main.zip");
 		File zipLib = new File(aspectLib);
 		URL classes = FileUtil.getFileURL(classZip);
-		URL aspectjrt = FileUtil.getFileURL(new File(ASPECTJRT));
+		URL aspectjrt = FileUtil.getFileURL(new File(RUNTIME_BIN));
 		URL aspects = FileUtil.getFileURL(zipLib);
 		URL[] classURLs = new URL[] { aspects, classes, aspectjrt };
 		URL[] aspectURLs = new URL[] { aspects };
@@ -480,7 +483,7 @@ public class WeavingURLClassLoaderTest extends TestCase {
 
 	private void doTestZipAspectsTest() throws Exception {
 		URL classes = FileUtil.getFileURL(new File(TEST_BASE + "/main.zip"));
-		URL aspectjrt = FileUtil.getFileURL(new File(ASPECTJRT));
+		URL aspectjrt = FileUtil.getFileURL(new File(RUNTIME_BIN));
 		URL[] classURLs = new URL[] { classes, aspectjrt };
 		ClassLoader parent = getClass().getClassLoader();
 		WeavingURLClassLoader loader = new WeavingURLClassLoader(classURLs, new URL[] {}, parent);

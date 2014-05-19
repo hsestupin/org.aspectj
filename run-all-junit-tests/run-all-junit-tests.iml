@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://$MODULE_DIR$/../lib/junit/junit.jar!/" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/testsrc" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/testsrc" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module" module-name="ajbrowser" />
+    <orderEntry type="module" module-name="ajde" />
+    <orderEntry type="module" module-name="asm" />
+    <orderEntry type="module" module-name="bridge" />
+    <orderEntry type="module" module-name="build" />
+    <orderEntry type="module" module-name="org.aspectj.ajdt.core" />
+    <orderEntry type="module" module-name="org.eclipse.jdt.core" />
+    <orderEntry type="module" module-name="runtime" />
+    <orderEntry type="module" module-name="taskdefs" />
+    <orderEntry type="module" module-name="testing" />
+    <orderEntry type="module" module-name="testing-client" />
+    <orderEntry type="module" module-name="testing-drivers" />
+    <orderEntry type="module" module-name="testing-util" />
+    <orderEntry type="module" module-name="util" />
+    <orderEntry type="module" module-name="weaver" />
+    <orderEntry type="module-library">
+      <library name="junit.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/junit/junit.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file:///lib/junit/junit-src.jar" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module" module-name="tests" />
+    <orderEntry type="module" module-name="aspectj5rt" />
+    <orderEntry type="module" module-name="ajdoc" />
+    <orderEntry type="module" module-name="loadtime" />
+    <orderEntry type="module" module-name="loadtime5" />
+    <orderEntry type="module" module-name="weaver5" />
+    <orderEntry type="module" module-name="ajde.core" />
+    <orderEntry type="module" module-name="org.aspectj.matcher" />
+  </component>
+</module>
+

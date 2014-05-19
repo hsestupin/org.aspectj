@@ -23,6 +23,8 @@ import org.aspectj.weaver.patterns.DumpPointcutVisitor;
 import org.aspectj.weaver.patterns.PatternParser;
 import org.aspectj.weaver.patterns.TypePattern;
 
+import static org.aspectj.testing.util.TestResources.WEAVER_TESTDATA;
+
 /**
  * @author <a href="mailto:alex AT gnilux DOT com">Alexandre Vasseur</a>
  */
@@ -33,10 +35,10 @@ public class VisitorTestCase extends TestCase {
 
     protected void setUp() throws Exception {
         super.setUp();
-        LineNumberReader rp = new LineNumberReader(new FileReader("../weaver/testdata/visitor.pointcuts.txt"));
+        LineNumberReader rp = new LineNumberReader(new FileReader(WEAVER_TESTDATA + "visitor.pointcuts.txt"));
         feed(rp, pointcuts);
         rp.close();
-        LineNumberReader rt = new LineNumberReader(new FileReader("../weaver/testdata/visitor.typepatterns.txt"));
+        LineNumberReader rt = new LineNumberReader(new FileReader(WEAVER_TESTDATA + "visitor.typepatterns.txt"));
         feed(rt, typePatterns);
         rt.close();
     }

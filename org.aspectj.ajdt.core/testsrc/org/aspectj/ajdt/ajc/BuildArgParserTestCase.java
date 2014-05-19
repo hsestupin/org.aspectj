@@ -17,6 +17,7 @@ import java.util.*;
 
 import junit.framework.TestCase;
 
+import org.aspectj.testing.util.TestResources;
 import org.aspectj.ajdt.internal.core.builder.*;
 import org.aspectj.bridge.CountingMessageHandler;
 import org.aspectj.bridge.IMessage;
@@ -34,7 +35,7 @@ import org.aspectj.org.eclipse.jdt.internal.compiler.classfmt.ClassFileConstants
 public class BuildArgParserTestCase extends TestCase {
 
 	private static final String TEST_DIR = AjdtAjcTests.TESTDATA_PATH + File.separator + "ajc" + File.separator;
-	private MessageWriter messageWriter = new MessageWriter(new PrintWriter(System.out), false);
+    private MessageWriter messageWriter = new MessageWriter(new PrintWriter(System.out), false);
 
 	public BuildArgParserTestCase(String name) {
 		super(name);
@@ -146,8 +147,8 @@ public class BuildArgParserTestCase extends TestCase {
 	public void testAspectpath() throws InvalidInputException {
 		final String SOURCE_JAR = AjdtAjcTests.TESTDATA_PATH + "/testclasses.jar";
 		final String SOURCE_JARS = AjdtAjcTests.TESTDATA_PATH + "/testclasses.jar" + File.pathSeparator 
-			+ "../weaver/testdata/tracing.jar" + File.pathSeparator 
-			+ "../weaver/testdata/dummyAspect.jar";
+			+ TestResources.WEAVER_TESTDATA + "tracing.jar" + File.pathSeparator
+			+ TestResources.WEAVER_TESTDATA + "dummyAspect.jar";
 		AjBuildConfig config = genBuildConfig(new String[] { 
 			"-aspectpath", SOURCE_JAR }, 
 			messageWriter);
@@ -163,8 +164,8 @@ public class BuildArgParserTestCase extends TestCase {
 	public void testInJars() throws InvalidInputException {
 		final String SOURCE_JAR = AjdtAjcTests.TESTDATA_PATH + "/testclasses.jar";
 		final String SOURCE_JARS = AjdtAjcTests.TESTDATA_PATH + "/testclasses.jar" + File.pathSeparator 
-			+ "../weaver/testdata/tracing.jar" + File.pathSeparator 
-			+ "../weaver/testdata/dummyAspect.jar";
+			+ TestResources.WEAVER_TESTDATA + "tracing.jar" + File.pathSeparator
+			+ TestResources.WEAVER_TESTDATA + "dummyAspect.jar";
 		AjBuildConfig config = genBuildConfig(new String[] { 
 			"-injars", SOURCE_JAR }, 
 			messageWriter);

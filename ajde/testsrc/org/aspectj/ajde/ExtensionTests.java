@@ -34,7 +34,7 @@ public class ExtensionTests extends AjcTestCase {
 	protected void setUp() throws Exception {
 		super.setUp();
 		// TODO-path
-		baseDir = new File("../ajde/testdata", PROJECT_DIR);
+		baseDir = new File("ajde/testdata", PROJECT_DIR);
 	}
 
 	/**

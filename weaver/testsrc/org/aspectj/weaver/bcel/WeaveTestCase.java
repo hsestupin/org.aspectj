@@ -37,6 +37,8 @@ import org.aspectj.weaver.patterns.PerClause;
 import org.aspectj.weaver.patterns.Pointcut;
 import org.aspectj.weaver.patterns.SimpleScope;
 
+import static org.aspectj.testing.util.TestResources.WEAVER_TESTDATA;
+
 public abstract class WeaveTestCase extends TestCase {
 
 	public boolean regenerate = false;
@@ -87,7 +89,7 @@ public abstract class WeaveTestCase extends TestCase {
 	}
 
 	// static String classDir = "../weaver/bin";
-	static String classDir = BcweaverTests.TESTDATA_PATH + File.separator + "bin";
+	static String classDir = WEAVER_TESTDATA + File.separator + "bin";
 
 	public void weaveTest(String name, String outName, List<ShadowMunger> planners) throws IOException {
 		BcelWeaver weaver = new BcelWeaver(world);
@@ -158,7 +160,7 @@ public abstract class WeaveTestCase extends TestCase {
 			realCheckClass(gen, outDir, expectedFile);
 	}
 
-	static final File TESTDATA_DIR = new File(BcweaverTests.TESTDATA_PATH);
+	static final File TESTDATA_DIR = new File(WEAVER_TESTDATA);
 
 	void genClass(LazyClassGen gen, String outDir, String expectedFile) throws IOException {
 		// ClassGen b = getJavaClass(outDir, className);
@@ -254,7 +256,7 @@ public abstract class WeaveTestCase extends TestCase {
 	}
 
 	public String getTraceJar() {
-		return BcweaverTests.TESTDATA_PATH + "/tracing.jar";
+		return WEAVER_TESTDATA + "/tracing.jar";
 	}
 
 	// ----

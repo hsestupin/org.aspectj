@@ -1,2 +1,5 @@
 */bin
 aj-build/
+/out
+_*.csv
+.idea/workspace.xml

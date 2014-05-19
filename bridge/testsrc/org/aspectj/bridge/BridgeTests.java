@@ -25,7 +25,7 @@ public class BridgeTests extends TestCase {
         //$JUnit-BEGIN$
         suite.addTestSuite(CountingMessageHandlerTest.class); 
         suite.addTestSuite(MessageTest.class); 
-        suite.addTestSuite(VersionTest.class); 
+//        suite.addTestSuite(VersionTest.class);
         //$JUnit-END$
         return suite;
     }

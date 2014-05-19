@@ -31,9 +31,11 @@ import org.aspectj.weaver.bcel.BcelWorld;
 import org.aspectj.weaver.loadtime.definition.Definition;
 import org.aspectj.weaver.tools.WeavingAdaptor;
 
+import static org.aspectj.testing.util.TestResources.*;
+
 public class ClassLoaderWeavingAdaptorTest extends TestCase {
 
-	public void testClassLoaderWeavingAdaptor() {
+    public void testClassLoaderWeavingAdaptor() {
 		ClassLoader loader = new URLClassLoader(new URL[] {}, null);
 		ClassLoaderWeavingAdaptor adaptor = new ClassLoaderWeavingAdaptor();
 		adaptor.initialize(loader, null);
@@ -467,12 +469,12 @@ public class ClassLoaderWeavingAdaptorTest extends TestCase {
 	// }
 
 	public void testAcceptanceSpeedStarDotDotStar() throws Exception {
-		URLClassLoader loader = new URLClassLoader(new URL[] { new File("../loadtime/bin").toURI().toURL(),
-				new File("../loadtime/testdata/anaspect.jar").toURI().toURL() }, null);
+		URLClassLoader loader = new URLClassLoader(new URL[] { new File(LOADTIME_BIN).toURI().toURL(),
+				new File(LOADTIME_TESTDATA + "anaspect.jar").toURI().toURL() }, null);
 
-		JavaClass jc = getClassFrom("../loadtime/bin", "org.aspectj.weaver.loadtime.ClassLoaderWeavingAdaptorTest$TestOne");
+		JavaClass jc = getClassFrom(LOADTIME_BIN, "org.aspectj.weaver.loadtime.ClassLoaderWeavingAdaptorTest$TestOne");
 		byte[] bs = jc.getBytes();
-		jc = getClassFrom("../loadtime/bin", "org.aspectj.weaver.loadtime.ClassLoaderWeavingAdaptorTest$TestOneCGLIB");
+		jc = getClassFrom(LOADTIME_BIN, "org.aspectj.weaver.loadtime.ClassLoaderWeavingAdaptorTest$TestOneCGLIB");
 		byte[] bs2 = jc.getBytes();
 		// InputStream is = loader.getResourceAsStream("org.aspectj.weaver.loadtime.ClassLoaderWeaverAdaptorTests$TestOne");
 		assertNotNull(bs);
@@ -510,7 +512,7 @@ public class ClassLoaderWeavingAdaptorTest extends TestCase {
 		etime = System.currentTimeMillis();
 		System.out.println("Rejection " + (etime - stime) + "ms");
 
-		jc = getClassFrom("../loadtime/bin", "testdata.MessageService$$EnhancerByCGLIB$$6dd4e683");
+		jc = getClassFrom(LOADTIME_BIN, "testdata.MessageService$$EnhancerByCGLIB$$6dd4e683");
 		byte[] bs3 = jc.getBytes();
 		boolean b = adaptor.accept("testdata.MessageService$$EnhancerByCGLIB$$6dd4e683", bs3);
 		assertFalse(b);
@@ -522,12 +524,12 @@ public class ClassLoaderWeavingAdaptorTest extends TestCase {
 	// excludes="!xxxx" should also be fast matched...
 
 	public void testAcceptanceSpeedExactName() throws Exception {
-		URLClassLoader loader = new URLClassLoader(new URL[] { new File("../loadtime/bin").toURI().toURL(),
-				new File("../loadtime/testdata/anaspect.jar").toURI().toURL() }, null);
+		URLClassLoader loader = new URLClassLoader(new URL[] { new File(LOADTIME_BIN).toURI().toURL(),
+				new File(LOADTIME_TESTDATA + "anaspect.jar").toURI().toURL() }, null);
 
-		JavaClass jc = getClassFrom("../loadtime/bin", "org.aspectj.weaver.loadtime.ClassLoaderWeavingAdaptorTest$TestOne");
+		JavaClass jc = getClassFrom(LOADTIME_BIN, "org.aspectj.weaver.loadtime.ClassLoaderWeavingAdaptorTest$TestOne");
 		byte[] bs = jc.getBytes();
-		jc = getClassFrom("../loadtime/bin", "org.aspectj.weaver.loadtime.ClassLoaderWeavingAdaptorTest$TestOneCGLIB");
+		jc = getClassFrom(LOADTIME_BIN, "org.aspectj.weaver.loadtime.ClassLoaderWeavingAdaptorTest$TestOneCGLIB");
 		byte[] bs2 = jc.getBytes();
 		// InputStream is = loader.getResourceAsStream("org.aspectj.weaver.loadtime.ClassLoaderWeaverAdaptorTests$TestOne");
 		assertNotNull(bs);
@@ -587,8 +589,8 @@ public class ClassLoaderWeavingAdaptorTest extends TestCase {
 
 	public TestClassLoaderWeavingAdaptor getAdaptor(Definition... definitions) {
 		try {
-			URLClassLoader loader = new URLClassLoader(new URL[] { new File("../loadtime/bin").toURI().toURL(),
-					new File("../loadtime/testdata/anaspect.jar").toURI().toURL() }, null);
+			URLClassLoader loader = new URLClassLoader(new URL[] { new File(LOADTIME_BIN).toURI().toURL(),
+					new File(LOADTIME_TESTDATA + "anaspect.jar").toURI().toURL() }, null);
 			TestWeavingContext wc = new TestWeavingContext(loader);
 			for (Definition definition : definitions) {
 				// need some random aspect or the weaver will shut down!
@@ -605,8 +607,8 @@ public class ClassLoaderWeavingAdaptorTest extends TestCase {
 
 	public TestClassLoaderWeavingAdaptor getAdaptor(String[] includePatterns, String[] excludePatterns) {
 		try {
-			URLClassLoader loader = new URLClassLoader(new URL[] { new File("../loadtime/bin").toURI().toURL(),
-					new File("../loadtime/testdata/anaspect.jar").toURI().toURL() }, null);
+			URLClassLoader loader = new URLClassLoader(new URL[] { new File(LOADTIME_BIN).toURI().toURL(),
+					new File(LOADTIME_TESTDATA + "anaspect.jar").toURI().toURL() }, null);
 			TestWeavingContext wc = new TestWeavingContext(loader);
 			Definition d = new Definition();
 			if (includePatterns != null) {
@@ -657,7 +659,7 @@ public class ClassLoaderWeavingAdaptorTest extends TestCase {
 	}
 
 	public static JavaClass getClassFrom(String clazzname) throws ClassNotFoundException {
-		return getClassFrom("../loadtime/bin", clazzname);
+		return getClassFrom(LOADTIME_BIN, clazzname);
 	}
 
 	public static JavaClass getClassFrom(String frompath, String clazzname) throws ClassNotFoundException {

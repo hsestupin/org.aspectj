@@ -13,10 +13,14 @@ package org.aspectj.testing.server;
 import java.io.IOException;
 
 import junit.framework.TestCase;
+import junit.framework.TestResult;
+import org.aspectj.testing.util.TestResources;
+
+import static org.aspectj.testing.util.TestResources.TESTING_CLIENT_TESTDATA;
 
 public class TestServerTest extends TestCase {
 
-	private TestServer server;
+    private TestServer server;
 	
 	protected void setUp() throws Exception {
 		super.setUp();
@@ -26,7 +30,7 @@ public class TestServerTest extends TestCase {
 
 	public void testInitialize() {
 		try {
-			server.setWorkingDirectory("../testing-client/testdata");
+			server.setWorkingDirectory(TESTING_CLIENT_TESTDATA);
 			server.initialize();
 		}
 		catch (IOException ex) {
@@ -35,6 +39,6 @@ public class TestServerTest extends TestCase {
 	}
 
 	public void testSetWorkingDirectory() {
-		server.setWorkingDirectory("../testing-client/testdata");
+		server.setWorkingDirectory(TESTING_CLIENT_TESTDATA);
 	}
 }

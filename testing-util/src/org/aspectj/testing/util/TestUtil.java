@@ -72,8 +72,8 @@ public final class TestUtil {
 	private static File ASPECTJRT_PATH;
 	static {
 		{
-			String[] paths = { "sp:aspectjrt.path", "sp:aspectjrt.jar", "../lib/test/aspectjrt.jar",
-					"../aj-build/jars/aspectj5rt-all.jar", "../aj-build/jars/runtime.jar", "../runtime/bin" };
+			String[] paths = { "sp:aspectjrt.path", "sp:aspectjrt.jar", "lib/test/aspectjrt.jar",
+					"aj-build/jars/aspectj5rt-all.jar", "aj-build/jars/runtime.jar", "runtime/bin" };
 			ASPECTJRT_PATH = FileUtil.getBestFile(paths);
 		}
 		{

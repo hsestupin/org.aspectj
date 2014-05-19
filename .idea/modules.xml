@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/docs/sandbox/ubc-design-patterns/Design Pattern Examples.iml" filepath="$PROJECT_DIR$/docs/sandbox/ubc-design-patterns/Design Pattern Examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tests/multiIncremental/prx/EnforceProcess/EnforceProcess.iml" filepath="$PROJECT_DIR$/tests/multiIncremental/prx/EnforceProcess/EnforceProcess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajbrowser/ajbrowser.iml" filepath="$PROJECT_DIR$/ajbrowser/ajbrowser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajde/ajde.iml" filepath="$PROJECT_DIR$/ajde/ajde.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajde.core/ajde.core.iml" filepath="$PROJECT_DIR$/ajde.core/ajde.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajdoc/ajdoc.iml" filepath="$PROJECT_DIR$/ajdoc/ajdoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/asm/asm.iml" filepath="$PROJECT_DIR$/asm/asm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aspectj-attic/aspectj-attic.iml" filepath="$PROJECT_DIR$/aspectj-attic/aspectj-attic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aspectj5rt/aspectj5rt.iml" filepath="$PROJECT_DIR$/aspectj5rt/aspectj5rt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bcel-builder/bcel-builder.iml" filepath="$PROJECT_DIR$/bcel-builder/bcel-builder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bridge/bridge.iml" filepath="$PROJECT_DIR$/bridge/bridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/build/build.iml" filepath="$PROJECT_DIR$/build/build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/docs/docs.iml" filepath="$PROJECT_DIR$/docs/docs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eclipse.plugin/eclipse.plugin.iml" filepath="$PROJECT_DIR$/eclipse.plugin/eclipse.plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/docs/teaching/demos/figures/figures.iml" filepath="$PROJECT_DIR$/docs/teaching/demos/figures/figures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java5/java5.iml" filepath="$PROJECT_DIR$/java5/java5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loadtime/loadtime.iml" filepath="$PROJECT_DIR$/loadtime/loadtime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loadtime5/loadtime5.iml" filepath="$PROJECT_DIR$/loadtime5/loadtime5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.aspectj.ajdt.core/org.aspectj.ajdt.core.iml" filepath="$PROJECT_DIR$/org.aspectj.ajdt.core/org.aspectj.ajdt.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.aspectj.lib/org.aspectj.lib.iml" filepath="$PROJECT_DIR$/org.aspectj.lib/org.aspectj.lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.aspectj.matcher/org.aspectj.matcher.iml" filepath="$PROJECT_DIR$/org.aspectj.matcher/org.aspectj.matcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.eclipse.jdt.core/org.eclipse.jdt.core.iml" filepath="$PROJECT_DIR$/org.eclipse.jdt.core/org.eclipse.jdt.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/run-all-junit-tests/run-all-junit-tests.iml" filepath="$PROJECT_DIR$/run-all-junit-tests/run-all-junit-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/runtime/runtime.iml" filepath="$PROJECT_DIR$/runtime/runtime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/docs/sandbox/api-clients/sandbox-api-clients.iml" filepath="$PROJECT_DIR$/docs/sandbox/api-clients/sandbox-api-clients.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shadows.org.eclipse.jdt.core/shadows.org.eclipse.jdt.core.iml" filepath="$PROJECT_DIR$/shadows.org.eclipse.jdt.core/shadows.org.eclipse.jdt.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/taskdefs/taskdefs.iml" filepath="$PROJECT_DIR$/taskdefs/taskdefs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testing/testing.iml" filepath="$PROJECT_DIR$/testing/testing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testing-client/testing-client.iml" filepath="$PROJECT_DIR$/testing-client/testing-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testing-drivers/testing-drivers.iml" filepath="$PROJECT_DIR$/testing-drivers/testing-drivers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testing-util/testing-util.iml" filepath="$PROJECT_DIR$/testing-util/testing-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tests/tests.iml" filepath="$PROJECT_DIR$/tests/tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/util/util.iml" filepath="$PROJECT_DIR$/util/util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weaver/weaver.iml" filepath="$PROJECT_DIR$/weaver/weaver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weaver5/weaver5.iml" filepath="$PROJECT_DIR$/weaver5/weaver5.iml" />
+    </modules>
+  </component>
+</project>
+

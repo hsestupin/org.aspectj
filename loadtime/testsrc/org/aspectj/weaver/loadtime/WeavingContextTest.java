@@ -19,6 +19,7 @@ import java.util.List;
 
 import junit.framework.TestCase;
 
+import org.aspectj.testing.util.TestResources;
 import org.aspectj.weaver.tools.WeavingAdaptor;
 
 public class WeavingContextTest extends TestCase {
@@ -83,7 +84,7 @@ public class WeavingContextTest extends TestCase {
 	}
 
 	public void testGetFile() throws IOException {
-		File file = new File("../loadtime/testdata");
+		File file = new File(TestResources.LOADTIME_TESTDATA);
 		URL fileURL = file.getCanonicalFile().toURL();
 		URLClassLoader loader = new URLClassLoader(new URL[] { fileURL },null);
 		IWeavingContext context = new TestWeavingContext(loader) {
@@ -101,7 +102,7 @@ public class WeavingContextTest extends TestCase {
 	}
 
 	public void testGetId() throws IOException {
-		File file = new File("../loadtime/testdata");
+		File file = new File(TestResources.LOADTIME_TESTDATA);
 		URL fileURL = file.getCanonicalFile().toURL();
 		URLClassLoader loader = new URLClassLoader(new URL[] { fileURL },null);
 		IWeavingContext context = new TestWeavingContext(loader) {
@@ -119,7 +120,7 @@ public class WeavingContextTest extends TestCase {
 	}
 
 	public void testGetDefinitions () throws Exception {
-		File file = new File("../loadtime/testdata");
+		File file = new File(TestResources.LOADTIME_TESTDATA);
 		URL fileURL = file.getCanonicalFile().toURL();
 		URLClassLoader loader = new URLClassLoader(new URL[] { fileURL },null);
 		IWeavingContext context = new TestWeavingContext(loader) {

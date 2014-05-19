@@ -23,7 +23,7 @@ import org.aspectj.util.FileUtil;
  * @author Mik Kersten
  */
 public class SymbolFileGenerationTest extends AjcTestCase {
-	private static final String DIR = "../ajde/testdata/examples/coverage";
+	private static final String DIR = "ajde/testdata/examples/coverage";
 
 	protected File dir = new File(DIR);
 	protected File configFile = new File(DIR + "/coverage.lst");

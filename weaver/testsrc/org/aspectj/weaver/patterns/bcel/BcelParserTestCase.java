@@ -16,10 +16,12 @@ import org.aspectj.weaver.World;
 import org.aspectj.weaver.bcel.BcelWorld;
 import org.aspectj.weaver.patterns.ParserTestCase;
 
+import static org.aspectj.testing.util.TestResources.WEAVER_TESTDATA;
+
 public class BcelParserTestCase extends ParserTestCase {
 
 	public World getWorld() {
-		return new BcelWorld(BcweaverTests.TESTDATA_PATH + "/testcode.jar");
+		return new BcelWorld(WEAVER_TESTDATA + "/testcode.jar");
 	}
 
 }

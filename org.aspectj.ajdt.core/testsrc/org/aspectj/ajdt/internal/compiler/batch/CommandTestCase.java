@@ -70,7 +70,7 @@ public abstract class CommandTestCase extends TestCase {
 
 		args.add("-classpath");
 
-		args.add(getRuntimeClasspath() + File.pathSeparator + "../lib/junit/junit.jar");
+		args.add(getRuntimeClasspath() + File.pathSeparator + "lib/junit/junit.jar");
 
 		args.add("-g"); // XXX need this to get sourcefile and line numbers, shouldn't
 

@@ -26,6 +26,8 @@ import org.aspectj.weaver.ResolvedMember;
 import org.aspectj.weaver.ResolvedType;
 import org.aspectj.weaver.bcel.BcelWorld;
 
+import static org.aspectj.testing.util.TestResources.WEAVER_TESTDATA;
+
 /*
  * Sample types that this program uses are:
 
@@ -64,7 +66,7 @@ public class AnnotationPatternMatchingTestCase extends TestCase {
 
 	private ResolvedType loadType(String name) {
 		if (world == null) {
-			world = new BcelWorld(BcweaverTests.TESTDATA_PATH + "/testcode.jar");
+			world = new BcelWorld(WEAVER_TESTDATA + "/testcode.jar");
 			world.setBehaveInJava5Way(true);
 		}
 		return world.resolve(name);

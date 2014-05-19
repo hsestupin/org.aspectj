@@ -26,6 +26,8 @@ import org.aspectj.weaver.Shadow;
 import org.aspectj.weaver.ShadowMunger;
 import org.aspectj.weaver.UnresolvedType;
 
+import static org.aspectj.testing.util.TestResources.WEAVER_TESTDATA;
+
 public class MegaZipTestCase extends WeaveTestCase {
 
 	private File outDir;
@@ -79,7 +81,7 @@ public class MegaZipTestCase extends WeaveTestCase {
 
 	public void zipTest(String fileName) throws IOException {
 		long startTime = System.currentTimeMillis();
-		File inFile = new File(BcweaverTests.TESTDATA_PATH, fileName);
+		File inFile = new File(WEAVER_TESTDATA, fileName);
 		File outFile = new File(outDir, fileName);
 		outFile.delete();
 

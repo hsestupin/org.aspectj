@@ -22,7 +22,6 @@ import org.aspectj.util.FileUtil;
 
 public class BcweaverTests extends TestCase {
 
-	public static final String TESTDATA_PATH = "../weaver/testdata";
 	public static final String OUTDIR_PATH = "../weaver/out";
 
 	/** @return File outDir (writable) or null if unable to write */

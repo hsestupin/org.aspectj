@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://$MODULE_DIR$/../lib/junit/junit.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../lib/commons/commons.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../lib/bcel/bcel.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../lib/asm/asm-5.0.1.renamed.jar!/" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+      <src_folder value="file://$MODULE_DIR$/testsrc" expected_position="1" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/testsrc" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="runtime" />
+    <orderEntry type="module-library">
+      <library name="junit.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/junit/junit.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file:///lib/junit/src.jar" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module" module-name="util" />
+    <orderEntry type="module" module-name="testing-util" />
+    <orderEntry type="module" module-name="bridge" />
+    <orderEntry type="module" module-name="asm" />
+    <orderEntry type="module" module-name="aspectj5rt" />
+    <orderEntry type="module-library">
+      <library name="commons.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/commons/commons.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../lib/commons/commons-src.zip!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="bcel.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/bcel/bcel.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../lib/bcel/bcel-src.zip!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module" module-name="org.aspectj.matcher" />
+    <orderEntry type="module-library">
+      <library name="asm-5.0.1.renamed.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/asm/asm-5.0.1.renamed.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
+

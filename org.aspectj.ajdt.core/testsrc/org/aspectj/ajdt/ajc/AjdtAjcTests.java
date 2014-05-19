@@ -17,11 +17,11 @@ package org.aspectj.ajdt.ajc;
 import java.io.File;
 
 import junit.framework.*;
+import org.aspectj.testing.util.TestResources;
 
 public class AjdtAjcTests extends TestCase {
 
-    public static final String TESTDATA_PATH 
-                                = "../org.aspectj.ajdt.core/testdata";
+    public static final String TESTDATA_PATH = TestResources.AJDT_TESTDATA;
     public static final File TESTDATA_DIR = new File(TESTDATA_PATH);
 
     public static Test suite() { 
