@@ -47,11 +47,15 @@ import org.aspectj.tools.ajc.AjcTestCase;
 public class AntSpec implements ITestStep {
 
 	// ALSO SEE AJC
-	private final static String DEFAULT_LTW_CLASSPATH_ENTRIES = ".." + File.separator + "asm/bin" + File.pathSeparator + ".."
-			+ File.separator + "bridge/bin" + File.pathSeparator + ".." + File.separator + "loadtime/bin" + File.pathSeparator
-			+ ".." + File.separator + "loadtime5/bin" + File.pathSeparator + ".." + File.separator + "weaver/bin"
-			+ File.pathSeparator + ".." + File.separator + "org.aspectj.matcher/bin" + File.pathSeparator + ".." + File.separator
-			+ "lib/bcel/bcel.jar" + File.pathSeparator + ".." + File.separator + "lib/bcel/bcel-verifier.jar";;
+  private final static String DEFAULT_LTW_CLASSPATH_ENTRIES =
+          "asm/bin" + File.pathSeparator +
+                  "bridge/bin" + File.pathSeparator +
+                  "loadtime/bin" + File.pathSeparator +
+                  "loadtime5/bin" + File.pathSeparator +
+                  "weaver/bin" + File.pathSeparator +
+                  "org.aspectj.matcher/bin" + File.pathSeparator +
+                  "lib/bcel/bcel.jar" + File.pathSeparator +
+                  "lib/bcel/bcel-verifier.jar";;
 
 	private boolean m_verbose = false;
 	private AjcTest m_ajcTest;
@@ -78,7 +82,7 @@ public class AntSpec implements ITestStep {
 			// setup aj.sandbox
 			p.setUserProperty("aj.sandbox", inTestCase.getSandboxDirectory().getAbsolutePath());
 			// setup aj.dir "modules" folder
-			p.setUserProperty("aj.root", new File("..").getAbsolutePath());
+			p.setUserProperty("aj.root", System.getProperty("user.dir"));
 
 			// create the test implicit path aj.path that contains the sandbox + regular test infra path
 			Path path = new Path(p, inTestCase.getSandboxDirectory().getAbsolutePath());
@@ -194,12 +198,7 @@ public class AntSpec implements ITestStep {
 			m_stdOutSpec.matchAgainst(stdout.toString());
 		}
 		if (m_stdErrSpec != null) {
-			String stderr2 = stderr.toString();
-			// Working around this rediculous message that still comes out of Java7 builds:
-			if (stderr2.indexOf("Class JavaLaunchHelper is implemented in both")!=-1 && stderr2.indexOf('\n')!=-1) {
-				stderr2 = stderr2.replaceAll("objc\\[[0-9]*\\]: Class JavaLaunchHelper is implemented in both [^\n]*\n","");
-			}
-			m_stdErrSpec.matchAgainst(stderr2);
+			m_stdErrSpec.matchAgainst(stderr.toString());
 		}
 	}
 

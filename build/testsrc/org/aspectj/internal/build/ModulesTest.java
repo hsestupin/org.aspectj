@@ -88,12 +88,12 @@ public class ModulesTest extends TestCase {
 		}
 	}
     Modules getModules(Messager handler) {
-        File jarDir = new File("../aj-build-test-jars");
+        File jarDir = new File("aj-build-test-jars");
         if (!jarDir.exists()) {
             assertTrue(jarDir.mkdirs());
             tempFiles.add(jarDir);
         }
-        File baseDir = new File("..");
+        File baseDir = new File(System.getProperty("user.dir"));
         if (null == handler) {
             handler = new Messager();
         }

@@ -89,14 +89,14 @@ public class AjcTestCase extends TestCase {
 
 			// When the build machine executes the tests, it is using code built into jars rather than code build into
 			// bin directories. This means for the necessary types to be found we have to put these jars on the classpath:
-			+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars" + File.separator + "bridge.jar"
-			+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars" + File.separator + "util.jar"
-			+ File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars" + File.separator
-			+ "org.aspectj.matcher.jar" + File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars"
-			+ File.separator + "loadtime.jar" + File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars"
-			+ File.separator + "weaver.jar" + File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars"
-			+ File.separator + "weaver5.jar" + File.pathSeparator + ".." + File.separator + "aj-build" + File.separator + "jars"
-			+ File.separator + "asm.jar" + File.pathSeparator + ".." + File.separator + "lib" + File.separator + "test"
+			+ File.pathSeparator + "aj-build" + File.separator + "jars" + File.separator + "bridge.jar"
+			+ File.pathSeparator + "aj-build" + File.separator + "jars" + File.separator + "util.jar"
+			+ File.pathSeparator + "aj-build" + File.separator + "jars" + File.separator
+			+ "org.aspectj.matcher.jar" + File.pathSeparator + "aj-build" + File.separator + "jars"
+			+ File.separator + "loadtime.jar" + File.pathSeparator + "aj-build" + File.separator + "jars"
+			+ File.separator + "weaver.jar" + File.pathSeparator + "aj-build" + File.separator + "jars"
+			+ File.separator + "weaver5.jar" + File.pathSeparator + "aj-build" + File.separator + "jars"
+			+ File.separator + "asm.jar" + File.pathSeparator + "lib" + File.separator + "test"
 			+ File.separator + "testing-client.jar"
 			// hmmm, this next one should perhaps point to an aj-build jar...
 			+ File.pathSeparator + ".." + File.separator + "lib" + File.separator + "test" + File.separator + "aspectjrt.jar";

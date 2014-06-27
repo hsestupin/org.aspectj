@@ -31,9 +31,9 @@ public class AtAjLTWTests extends XMLBasedAjcTestCase {
     return getClassResource("ltw.xml");
 	}
 
-	public void testRunThemAllWithJavacCompiledAndLTW() {
-		runTest("RunThemAllWithJavacCompiledAndLTW");
-	}
+//	public void testRunThemAllWithJavacCompiledAndLTW() {
+//		runTest("RunThemAllWithJavacCompiledAndLTW");
+//	}
 
 	public void testAjcLTWPerClauseTest_XterminateAfterCompilation() {
 		runTest("AjcLTW PerClauseTest -XterminateAfterCompilation");
@@ -131,7 +131,7 @@ public class AtAjLTWTests extends XMLBasedAjcTestCase {
 		runTest("LTW DumpTest proxy");
 
 		// The working directory is different because this test must be forked
-		File dir = new File("../tests/java5/ataspectj");
+		File dir = new File("tests/java5/ataspectj");
 		File f = new File(dir, "_ajdump/_before/com/sun/proxy");
 		CountingFilenameFilter cff = new CountingFilenameFilter(".class");
 		f.listFiles(cff);
@@ -166,9 +166,9 @@ public class AtAjLTWTests extends XMLBasedAjcTestCase {
 		f.delete();
 	}
 
-	public void testAjcAspect1LTWAspect2_Xreweavable() {
-		runTest("Ajc Aspect1 LTW Aspect2 -Xreweavable");
-	}
+//	public void testAjcAspect1LTWAspect2_Xreweavable() {
+//		runTest("Ajc Aspect1 LTW Aspect2 -Xreweavable");
+//	}
 
 	public void testLTWLogSilent() {
 		runTest("LTW Log silent");
@@ -186,18 +186,18 @@ public class AtAjLTWTests extends XMLBasedAjcTestCase {
 		runTest("LTW Log messageHandlerClass");
 	}
 
-	public void testLTWUnweavable() {
-		// actually test that we do LTW proxy and jit classes
-		runTest("LTW Unweavable");
-	}
+//	public void testLTWUnweavable() {
+//		// actually test that we do LTW proxy and jit classes
+//		runTest("LTW Unweavable");
+//	}
 
 	public void testLTWDecp() {
 		runTest("LTW Decp");
 	}
 
-	public void testLTWDecp2() {
-		runTest("LTW Decp2");
-	}
+//	public void testLTWDecp2() {
+//		runTest("LTW Decp2");
+//	}
 
 	public void testCompileTimeAspectsDeclaredToLTWWeaver() {
 		runTest("Compile time aspects declared to ltw weaver");

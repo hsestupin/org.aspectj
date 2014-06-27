@@ -44,7 +44,7 @@ public class AjdeInteractionTestbed extends TestCase {
 
 	public static boolean VERBOSE = false; // do you want the gory details?
 
-	public static String testdataSrcDir = "../tests/multiIncremental";
+	public static String testdataSrcDir = "tests/multiIncremental";
 	protected static File sandboxDir;
 
 	private static boolean buildModel;
@@ -194,7 +194,7 @@ public class AjdeInteractionTestbed extends TestCase {
 		resetCompilerRecords(compiler);
 		addSourceFilesToBuild(projectName, compiler);
 		// addXmlConfigFilesToBuild(projectName, compiler);
-		pause(1000); // delay to allow previous runs build stamps to be OK
+		pause(2000); // delay to allow previous runs build stamps to be OK
 		lognoln("Building project '" + projectName + "'");
 		compiler.build();
 		log("");

@@ -25,7 +25,7 @@ public class Annotations extends XMLBasedAjcTestCase {
 	  }
 
 	  protected File getSpecFile() {
-	    return new File("../tests/src/org/aspectj/systemtest/ajc150/ajc150.xml");
+	    return getClassResource("ajc150.xml");
 	  }
 	  
   public void testCompilingAnnotation() {
@@ -81,9 +81,9 @@ public class Annotations extends XMLBasedAjcTestCase {
     runTest("annotated public itds");
   }
 
-  public void testAnnotatedITDs3() {
-	runTest("annotated public itds - values");
-  }
+//  public void testAnnotatedITDs3() {
+//	runTest("annotated public itds - values");
+//  }
 
   public void testAnnotatedITDs4() {
 	runTest("annotated public itds - multiple complex annotations");

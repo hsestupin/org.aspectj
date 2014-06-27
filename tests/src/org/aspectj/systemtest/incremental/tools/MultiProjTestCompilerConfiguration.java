@@ -68,11 +68,11 @@ public class MultiProjTestCompilerConfiguration implements ICompilerConfiguratio
 			sb.append(File.pathSeparator + dir.getAbsolutePath());
 		}
 		String cp = sb.toString() + File.pathSeparator + new File(AjdeInteractionTestbed.testdataSrcDir) + File.pathSeparator
-				+ System.getProperty("sun.boot.class.path") + File.pathSeparator + "../runtime/bin" + File.pathSeparator
+				+ System.getProperty("sun.boot.class.path") + File.pathSeparator + "runtime/bin" + File.pathSeparator
 				+ this.classPath + File.pathSeparator + System.getProperty("aspectjrt.path") + File.pathSeparator
-				+ "../lib/junit/junit.jar" + "c:/batik/batik-1.6/lib/batik-util.jar;"
+				+ "lib/junit/junit.jar" + "c:/batik/batik-1.6/lib/batik-util.jar;"
 				+ "c:/batik/batik-1.6/lib/batik-awt-util.jar;" + "c:/batik/batik-1.6/lib/batik-dom.jar;"
-				+ "c:/batik/batik-1.6/lib/batik-svggen.jar;" + File.pathSeparator + ".." + File.separator + "lib" + File.separator
+				+ "c:/batik/batik-1.6/lib/batik-svggen.jar;" + "lib" + File.separator
 				+ "test" + File.separator + "aspectjrt.jar";
 
 		// look at dependant projects

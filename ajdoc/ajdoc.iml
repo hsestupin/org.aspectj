@@ -36,9 +36,12 @@
       <library name="JRE15_LIB">
         <CLASSES>
           <root url="file://$JRE15_SRC$" />
+          <root url="jar://C:/Program Files/Java/jdk1.7.0_60/lib/tools.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://C:/Program Files/Java/jdk1.7.0_60/lib/tools.jar!/" />
+        </SOURCES>
       </library>
     </orderEntry>
   </component>

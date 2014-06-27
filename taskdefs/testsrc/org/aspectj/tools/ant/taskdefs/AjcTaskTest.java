@@ -67,7 +67,7 @@ public class AjcTaskTest extends TestCase {
 
 	static {
 		tempDir = new File("IncrementalAjcTaskTest-temp");
-		String toolsPath = "../aj-build/dist/tools/lib/aspectjtools.jar";
+		String toolsPath = "aj-build/dist/tools/lib/aspectjtools.jar";
 		File toolsjar = new File(toolsPath);
 		if (toolsjar.canRead()) {
 			aspectjtoolsJar = toolsjar.getAbsolutePath();
@@ -78,7 +78,7 @@ public class AjcTaskTest extends TestCase {
 					+ toolsPath;
 			System.out.println(s);
 		}
-		File dir = new File("../taskdefs/testdata");
+		File dir = new File("taskdefs/testdata");
 		if (dir.canRead() && dir.isDirectory()) {
 			testdataDir = dir.getAbsolutePath();
 		} else {
@@ -232,7 +232,7 @@ public class AjcTaskTest extends TestCase {
             String path = testdataDir + File.separator + input;
             task.setSourceRoots(new Path(task.getProject(), path));
         }
-        task.setClasspath(new Path(p, "../lib/test/aspectjrt.jar"));
+        task.setClasspath(new Path(p, "lib/test/aspectjrt.jar"));
         return task;
     }
 

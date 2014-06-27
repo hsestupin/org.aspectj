@@ -168,7 +168,7 @@ public class SynchronizationTransformTests extends XMLBasedAjcTestCase {
 
 	private void checkMethod(String typename, String methodname) {
 		LazyMethodGen m = getMethod(typename, methodname);
-		File expectedF = new File(".." + File.separator + "tests" + File.separator + "features152" + File.separator
+		File expectedF = new File("tests" + File.separator + "features152" + File.separator
 				+ "synchronization" + File.separator + "transformed" + File.separator + "expected" + File.separator + typename
 				+ "." + methodname + ".txt");
 		if (regenerate) {

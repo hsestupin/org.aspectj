@@ -88,23 +88,23 @@ public class AjcSpecXmlReaderTest extends TestCase {
         
     }
     public void testAjcTests() throws IOException { 
-        checkXmlRoundTrip("../tests/ajcTests");
+        checkXmlRoundTrip("tests/ajcTests");
     }
 
     public void testAjcTests10() throws IOException { 
-        checkXmlRoundTrip("../tests/ajcTests10");
+        checkXmlRoundTrip("tests/ajcTests10");
     }
 
     public void testAjcTestsBroken() throws IOException { 
-        checkXmlRoundTrip("../tests/ajcTestsBroken");
+        checkXmlRoundTrip("tests/ajcTestsBroken");
     }
 
     public void testAjcTestsAttic() throws IOException { 
-        checkXmlRoundTrip("../tests/ajcTestsAttic");
+        checkXmlRoundTrip("tests/ajcTestsAttic");
     }
     
     public void testAjcHarnessTests() throws IOException { 
-        checkXmlRoundTrip("../tests/ajcHarnessTests");
+        checkXmlRoundTrip("tests/ajcHarnessTests");
     }
 
     void checkXmlRoundTrip(String path) throws IOException {

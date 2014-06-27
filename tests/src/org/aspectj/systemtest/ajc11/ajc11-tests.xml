@@ -664,7 +664,7 @@
                   
             <message kind="error" line="28"/>        
             <message kind="warning" line="29"/>        
-            <message kind="warning" line="30"/>            
+            <message kind="error" line="30"/>
         </compile>
     </ajc-test>
     

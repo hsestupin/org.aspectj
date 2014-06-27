@@ -27,7 +27,7 @@ import org.aspectj.tools.ajc.Ajc;
  */
 public class AjdeCoreTestCase extends TestCase {
 
-	public final static String testdataSrcDir = "../ajde.core/testdata";
+	public final static String testdataSrcDir = "ajde.core/testdata";
 	protected static File sandboxDir;
 
 	private String projectDir;

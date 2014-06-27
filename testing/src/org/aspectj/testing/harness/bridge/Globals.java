@@ -41,7 +41,7 @@ public class Globals {
 
     /** assumed relative location of a library with required jars */
     public static final String LIBDIR =
-        getSystemProperty(LIBDIR_NAME, "../lib/test");
+        getSystemProperty(LIBDIR_NAME, "lib/test");
 
     /** Path to J2SE_HOME */
     public static final File J2SE14_RTJAR;

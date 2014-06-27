@@ -118,7 +118,7 @@ public class AjcTest {
 	 * @param dir The dir to set.
 	 */
 	public void setDir(String dir) {
-		dir = "../tests/" + dir;
+		dir = "tests/" + dir;
 		this.dir = dir;
 	}
 	/**

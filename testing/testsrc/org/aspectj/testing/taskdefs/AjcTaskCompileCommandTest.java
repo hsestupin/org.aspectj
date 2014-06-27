@@ -72,15 +72,15 @@ public class AjcTaskCompileCommandTest extends TestCase {
     }
 
     public void testDefault() {
-        runSimpleTest("../taskdefs/testdata/Default.java", 0);
+        runSimpleTest("taskdefs/testdata/Default.java", 0);
     }
 
     public void testDefaultList() {
-        runSimpleTest("../taskdefs/testdata/default.lst", 0);
+        runSimpleTest("taskdefs/testdata/default.lst", 0);
     }
     
     public void testCompileErrorList() {
-        runSimpleTest("../taskdefs/testdata/compileError.lst", 1);
+        runSimpleTest("taskdefs/testdata/compileError.lst", 1);
     }
 
     

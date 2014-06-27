@@ -326,7 +326,7 @@ public class Ajc {
 		}
 
 		try {
-			File workspace = new File(".." + File.separator);
+			File workspace = new File(".");
 			String workspaceName = workspace.getCanonicalPath();
 			int index = workspaceName.lastIndexOf(File.separator);
 			workspaceName = workspaceName.substring(index + 1);

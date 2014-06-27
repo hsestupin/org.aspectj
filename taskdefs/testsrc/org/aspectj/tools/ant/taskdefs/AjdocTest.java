@@ -36,11 +36,11 @@ public class AjdocTest extends TestCase {
         Project p = new Project();
         task.setProject(p);
         task.setSource("1.4");
-        Path ppath = new Path(p,"../taskdefs/testdata");
+        Path ppath = new Path(p,"taskdefs/testdata");
         task.setSourcepath(ppath);
         task.setIncludes("Ajdoc14Source.java");
         task.setDestdir("bin/AjdocTest");
-        task.setClasspath(new Path(p, "../lib/test/aspectjrt.jar"));
+        task.setClasspath(new Path(p, "lib/test/aspectjrt.jar"));
         task.execute();
     }
     
@@ -48,7 +48,7 @@ public class AjdocTest extends TestCase {
         Ajdoc task = new Ajdoc();
         Project p = new Project();
         task.setProject(p);
-        task.setSourcepath(new Path(p, "../taskdefs/testdata"));
+        task.setSourcepath(new Path(p, "taskdefs/testdata"));
         task.setIncludes("none");
         task.setDestdir("bin/AjdocTest");
         task.execute();

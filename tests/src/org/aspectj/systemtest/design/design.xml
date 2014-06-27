@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "../tests/ajcTestSuite.dtd" [
-<!ENTITY designTests SYSTEM "../tests/src/org/aspectj/systemtest/design/designtest.xml">
+<!ENTITY designTests SYSTEM "tests/src/org/aspectj/systemtest/design/designtest.xml">
 ]>
 
 <!-- Language Design Tests -->

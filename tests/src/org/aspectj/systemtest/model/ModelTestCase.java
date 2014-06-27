@@ -40,7 +40,7 @@ public abstract class ModelTestCase extends XMLBasedAjcTestCase {
 	protected static boolean regenerate = false;
 	protected static boolean debugTest = false;
 
-	private final String expectedOutDir = "../tests/model/expected" + File.separator;
+	private final String expectedOutDir = "tests/model/expected" + File.separator;
 	private String testid;
 
 	private String modelFilename;

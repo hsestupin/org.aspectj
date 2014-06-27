@@ -117,13 +117,13 @@ public class Ajc170Tests extends org.aspectj.testing.XMLBasedAjcTestCase {
 		runTest("xml defined dec at field");
 	}
 	
-	public void testXmlDefsDeclareAnnoFieldVariants1() {
-		runTest("xml defined dec anno - variants 1");
-	}
+//	public void testXmlDefsDeclareAnnoFieldVariants1() {
+//		runTest("xml defined dec anno - variants 1");
+//	}
 
-	public void testXmlDefsDeclareAnnoFieldVariants2() {
-		runTest("xml defined dec anno - variants 2");
-	}
+//	public void testXmlDefsDeclareAnnoFieldVariants2() {
+//		runTest("xml defined dec anno - variants 2");
+//	}
 
 	public void testXmlDefsDeclareAnnoFieldMultipleValues() {
 		runTest("xml defined dec anno - multiple values");
@@ -303,7 +303,7 @@ public class Ajc170Tests extends org.aspectj.testing.XMLBasedAjcTestCase {
 
 	@Override
 	protected File getSpecFile() {
-		return new File("../tests/src/org/aspectj/systemtest/ajc170/ajc170.xml");
+		return getClassResource("ajc170.xml");
 	}
 
 }

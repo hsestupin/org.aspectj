@@ -145,8 +145,8 @@ public class BuildModuleTests extends TestCase {
     public void testLicense_weaver() {
         String module = "weaver";
         // skip (testdata) packages fluffy, reflect
-        checkSourceDirectory(new File(Util.path(new String[] {"..", module, "src"})), module);
-        checkSourceDirectory(new File(Util.path(new String[] {"..", module, "testsrc", "org"})), module);
+        checkSourceDirectory(new File(Util.path(new String[] {module, "src"})), module);
+        checkSourceDirectory(new File(Util.path(new String[] {module, "testsrc", "org"})), module);
     }
     
     public void testLicense_ajdoc() {

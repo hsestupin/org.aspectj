@@ -46,7 +46,7 @@ public class CompilerRunTest extends TestCase {
     }
     
     public void setUp() {
-        testBaseDir = new File("../testing/temp-CompilerRunTest");
+        testBaseDir = new File("testing/temp-CompilerRunTest");
         File f = new File(testBaseDir, "one");
         f.mkdirs();
         assertTrue(f.canRead());

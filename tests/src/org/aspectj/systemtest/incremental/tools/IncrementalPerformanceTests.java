@@ -159,12 +159,12 @@ public class IncrementalPerformanceTests extends AbstractMultiProjectIncremental
 
 	protected void setUp() throws Exception {
 		super.setUp();
-		testdataSrcDir = "../tests/incrementalPerformance";
+		testdataSrcDir = "tests/incrementalPerformance";
 	}
 
 	protected void tearDown() throws Exception {
 		super.tearDown();
-		testdataSrcDir = "../tests/multiIncremental";
+		testdataSrcDir = "tests/multiIncremental";
 	}
 
 }

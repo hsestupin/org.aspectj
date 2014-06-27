@@ -83,7 +83,7 @@ public class Ajc11CompilerAdapterTest extends TestCase {
         tempFiles.add(classesDir);
         javac.setDestdir(classesDir);
         javac.setVerbose(LOGGING);
-        String rtpath = "../lib/test/aspectjrt.jar";
+        String rtpath = "lib/test/aspectjrt.jar";
         File rt = new File(rtpath);
         assertTrue("can read " + rtpath, rt.canRead());
         javac.setClasspath(new Path(project, rt.getAbsolutePath()));
@@ -91,7 +91,7 @@ public class Ajc11CompilerAdapterTest extends TestCase {
     }
     
     void setupTracingJava(Javac javac) { // XXX assumes module dir, doc loc
-        String exDir = "../docs/dist/doc/examples"; 
+        String exDir = "docs/dist/doc/examples";
         javac.setSrcdir(new Path(javac.getProject(), exDir));
         javac.setIncludes("tracing/*.java"); // XXX assumes tracing example
     }
