@@ -158,9 +158,9 @@ public class Ajc172Tests extends org.aspectj.testing.XMLBasedAjcTestCase {
 		assertEquals("ajc$if$1$1$4d4baf36", m.getName());
 	}
 
-//	public void testOptionalAspects_pr398588() {
-//		runTest("optional aspects");
-//	}
+	public void testOptionalAspects_pr398588() {
+		runTest("optional aspects");
+	}
 
 	public void testInconsistentClassFile_pr389750() {
 		runTest("inconsistent class file");
