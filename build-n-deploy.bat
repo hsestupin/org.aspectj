@@ -1,4 +1,4 @@
-call ant -Dbuild.config=useEclipseCompiles
+call ant
 
 set v=1.8.0.apt
 
